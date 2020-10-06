@@ -5,7 +5,7 @@ namespace UserRegistrationRegex
     {
         static void Main(string[] args)
         {
-            String firstName, lastName;
+            String firstName, lastName, email;
             Console.WriteLine("Enter First Name");
             firstName = Console.ReadLine();
             UserRegPattern pattern = new UserRegPattern();
@@ -15,6 +15,10 @@ namespace UserRegistrationRegex
             lastName = Console.ReadLine();
             bool result2 = pattern.ValidateFirstName(lastName);
             Console.WriteLine("Validation Check for last name is " + result2);
+            Console.WriteLine("Enter Email ID");
+            email = Console.ReadLine();
+            bool result3 = pattern.ValidateEmail(email);
+            Console.WriteLine("Validation Check for email is " + result3);
         }
     }
 }
