@@ -5,12 +5,16 @@ namespace UserRegistrationRegex
     {
         static void Main(string[] args)
         {
-            String firstName;
+            String firstName, lastName;
             Console.WriteLine("Enter First Name");
             firstName = Console.ReadLine();
             UserRegPattern pattern = new UserRegPattern();
-            bool result = pattern.ValidateFirstName(firstName);
-            Console.WriteLine("Validation Check for first name is "+ result);
+            bool result1 = pattern.ValidateFirstName(firstName);
+            Console.WriteLine("Validation Check for first name is "+ result1);
+            Console.WriteLine("Enter Last Name");
+            lastName = Console.ReadLine();
+            bool result2 = pattern.ValidateFirstName(lastName);
+            Console.WriteLine("Validation Check for last name is " + result2);
         }
     }
 }
