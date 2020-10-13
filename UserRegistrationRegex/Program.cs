@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace UserRegistrationRegex
 {
     class Program
@@ -27,6 +29,29 @@ namespace UserRegistrationRegex
             password = Console.ReadLine();
             bool result5 = pattern.ValidatePassword(password);
             Console.WriteLine("Validation Check for password is " + result5);
+            List<string> sampleEmailList = new List<string>()
+            {
+                "abc@yahoo.com",
+                "abc-100@yahoo.com",
+                "abc.100@yahoo.com",
+                "abc111@abc.com",
+                "abc-100@abc.net",
+                "abc.100@abc.com.au",
+                "abc@1.com",
+                "abc@gmail.com",
+                "abc+100@gmail.com"
+            };
+            foreach (string item in sampleEmailList)
+            {
+                if (pattern.ValidateEmail(item))
+                {
+                    Console.WriteLine("Valid Email");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Email");
+                }
+            }
         }
     }
 }
